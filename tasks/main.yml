@@ -4,7 +4,15 @@
   package:
     name: "{{ office_packages }}"
     state: latest
-  when:
-    ansible_distribution != 'Debian'
+
+- name: Install some terminal needs 
+  package:
+    name: "{{ shell_packages }}"
+    state: latest
+
+- name: Install packages for virtualisation
+  package:
+    name: "{{ virtualisation }}"
+    state: latest
 
 

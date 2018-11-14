@@ -6,4 +6,9 @@ office_packages:
 
 shell_packages:
   - xterm
+  - vim
+
+virtualisation:
+  - '@virtualization'
+
 
