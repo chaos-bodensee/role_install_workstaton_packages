@@ -1,0 +1,10 @@
+---
+
+- name: Install common base office packages 
+  package:
+    name: "{{ office_packages }}"
+    state: latest
+  when:
+    ansible_distribution != 'Debian'
+
+

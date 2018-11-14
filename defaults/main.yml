@@ -1,0 +1,9 @@
+---
+
+office_packages:
+  - thunderbird
+  - libreoffice
+
+shell_packages:
+  - xterm
+
