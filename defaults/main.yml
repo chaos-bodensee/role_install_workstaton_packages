@@ -3,10 +3,17 @@
 office_packages:
   - thunderbird
   - libreoffice
+  - gimp
+  - inkscape
+  - firefox
 
 shell_packages:
   - xterm
   - vim
+  - ranger
+  - git
+  - sl
+  - python
 
 virtualisation:
   - '@virtualization'
