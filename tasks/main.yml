@@ -1,5 +1,20 @@
 ---
 
+- name: install the latest version of Apache
+  dnf:
+    name: "{{ rpmfusion }}"
+    state: latest
+  when: 
+    - ansible_distribution == 'Fedora'
+
+
+- name: upgrade all packages
+  dnf:
+    name: "*"
+    state: latest
+  when: 
+    - ansible_distribution == 'Fedora'
+
 - name: Install common base office packages 
   package:
     name: "{{ office_packages }}"
