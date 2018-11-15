@@ -8,12 +8,13 @@ office_packages:
   - firefox
 
 shell_packages:
-  - xterm
   - vim
   - ranger
   - git
   - sl
   - python
+  - terminator
+  - ddate
 
 virtualisation:
   - '@virtualization'
