@@ -26,6 +26,7 @@ shell_packages:
   - gstreamer1-plugins-bad-freeworld
   - gstreamer1-plugins-ugly
   - gstreamer1-plugins-bad-nonfree 
+  - libselinux-python
 
 virtualisation:
   - '@virtualization'
