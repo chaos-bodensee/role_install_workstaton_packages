@@ -1,19 +1,43 @@
 ---
+- name: print ansible Distribution
+  debug:
+    msg: "{{ ansible_distribution }}"
 
-- name: install the latest version of Apache
+- name: install the latest version of rpm packages [RHEL]
   dnf:
     name: "{{ rpmfusion }}"
     state: latest
-  when: 
-    - ansible_distribution == 'Fedora'
+  when: ansible_distribution == 'Fedora' or ansible_distribution == 'RedHat'
 
+- name: install oackages for codecs [RHEL]
+  dnf:
+    name: "{{ multimedia_rhel }}"
+    state: latest
+  when: ansible_distribution == 'Fedora' or ansible_distribution == 'RedHat'
 
-- name: upgrade all packages
+- name: Install some packages for arch
+  pacman:
+    name: "{{ arch_packages }}"
+    state: latest
+    update_cache: yes
+  when: ansible_distribution == 'Archlinux'
+
+- name: Update all packages to the latest version [Debian]
+  apt:
+    upgrade: dist
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+- name: Update all packages to the latest version [Arch]
+  pacman:
+    update_cache: yes
+    upgrade: yes
+  when: ansible_distribution == 'Archlinux'
+
+- name: upgrade all packages [RHEL]
   dnf:
     name: "*"
     state: latest
-  when: 
-    - ansible_distribution == 'Fedora'
+  when: ansible_distribution == 'Fedora' or ansible_distribution == 'RedHat'
 
 - name: Install common base office packages 
   package:
@@ -25,9 +49,9 @@
     name: "{{ shell_packages }}"
     state: latest
 
-- name: Install packages for virtualisation
-  package:
-    name: "{{ virtualisation }}"
+- name: Install packages for virtualisation [RHEL]
+  dnf:
+    name: "{{ virtualisation_rhel }}"
     state: latest
-
+  when: ansible_distribution == 'Fedora' or ansible_distribution == 'RedHat'
 

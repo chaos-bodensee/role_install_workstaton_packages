@@ -22,13 +22,18 @@ shell_packages:
   - ddate
   - nmap
   - youtube-dl
+
+multimedia_rhel:
   - gstreamer1-plugins-bad-free-extras
   - gstreamer1-plugins-bad-freeworld
   - gstreamer1-plugins-ugly
   - gstreamer1-plugins-bad-nonfree 
   - libselinux-python
 
-virtualisation:
+virtualisation_rhel:
   - '@virtualization'
 
+arch_packages:
+  - libvirt
+  - virt-manager
 
