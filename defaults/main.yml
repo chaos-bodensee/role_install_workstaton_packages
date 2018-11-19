@@ -8,6 +8,7 @@ office_packages:
   - firefox
   - mpv
   - brasero
+  - system-config-printer
 
 rpmfusion:
   - "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
