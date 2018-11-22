@@ -40,4 +40,3 @@ virtualisation_rhel:
 arch_packages:
   - libvirt
   - virt-manager
-  - cfdisk
