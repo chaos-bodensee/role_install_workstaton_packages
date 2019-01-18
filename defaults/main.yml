@@ -5,7 +5,6 @@ office_packages:
   - libreoffice
   - gimp
   - inkscape
-  - firefox
   - mpv
   - brasero
   - system-config-printer
@@ -25,7 +24,6 @@ shell_packages:
   - ddate
   - nmap
   - youtube-dl
-  - openssh-askpass
 
 multimedia_rhel:
   - gstreamer1-plugins-bad-free-extras
@@ -33,6 +31,8 @@ multimedia_rhel:
   - gstreamer1-plugins-ugly
   - gstreamer1-plugins-bad-nonfree 
   - libselinux-python
+  - firefox
+  - openssh-askpass
 
 virtualisation_rhel:
   - '@virtualization'
@@ -40,3 +40,5 @@ virtualisation_rhel:
 arch_packages:
   - libvirt
   - virt-manager
+  - firefox
+  - openssh-askpass
