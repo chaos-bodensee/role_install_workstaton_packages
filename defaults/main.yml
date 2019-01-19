@@ -24,6 +24,7 @@ shell_packages:
   - ddate
   - nmap
   - youtube-dl
+  - bat
 
 multimedia_rhel:
   - gstreamer1-plugins-bad-free-extras
