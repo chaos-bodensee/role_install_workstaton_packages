@@ -24,7 +24,6 @@ shell_packages:
   - ddate
   - nmap
   - youtube-dl
-  - bat
   - axel
 
 multimedia_rhel:
@@ -35,6 +34,7 @@ multimedia_rhel:
   - libselinux-python
   - firefox
   - openssh-askpass
+  - bat
 
 virtualisation_rhel:
   - '@virtualization'
@@ -44,3 +44,4 @@ arch_packages:
   - virt-manager
   - firefox
   - openssh-askpass
+  - bat
