@@ -8,10 +8,6 @@ env:
     version: 28
   - distribution: ubuntu
     version: bionic
-  - distribution: ubuntu
-    version: xenial
-  - distribution: ubuntu
-    version: trusty
   - distribution: debian
     version: stretch
   - distribution: debian
