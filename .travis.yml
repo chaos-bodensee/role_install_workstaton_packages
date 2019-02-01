@@ -20,7 +20,7 @@ services:
   - docker
 
 before_install:
-  - 'sudo docker pull ${distribution}:${version}'
+  - 'sudo docker pull ${distribution}$(if [ "$1" == "something" ]; then  echo /; else echo :; fi)${version}'
   - 'sudo docker build --no-cache --rm --file=travis/Dockerfile.${distribution}-${version} --tag=${distribution}-${version}:ansible travis'
 
 script:
