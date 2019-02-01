@@ -12,8 +12,8 @@ env:
     version: stretch
   - distribution: debian
     version: jessie
-  - distribution: arch
-    version: linux
+  - distribution: archlinux
+    version: base
 
 
 services:
