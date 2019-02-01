@@ -8,14 +8,14 @@
   dnf:
     name: "{{ rpmfusion }}"
     state: latest
-  when: ansible_distribution == 'Fedora' or ansible_distribution == 'RedHat'
+  when: ansible_os_family == 'RedHat'
 
 - name: install packages for codecs [RHEL]
   become: yes
   dnf:
     name: "{{ multimedia_rhel }}"
     state: latest
-  when: ansible_distribution == 'Fedora' or ansible_distribution == 'RedHat'
+  when: ansible_os_family == 'RedHat'
 
 - name: Install some packages for arch
   become: yes
@@ -29,7 +29,7 @@
   become: yes
   apt:
     upgrade: dist
-  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+  when: ansible_os_family == 'Debian'
 
 - name: Update all packages to the latest version [Arch]
   become: yes
@@ -43,7 +43,7 @@
   dnf:
     name: "*"
     state: latest
-  when: ansible_distribution == 'Fedora' or ansible_distribution == 'RedHat'
+  when: ansible_os_family == 'RedHat'
 
 - name: Install common base office packages
   become: yes
@@ -62,5 +62,5 @@
   dnf:
     name: "{{ virtualisation_rhel }}"
     state: latest
-  when: ansible_distribution == 'Fedora' or ansible_distribution == 'RedHat'
+  when: ansible_os_family == 'RedHat'
 
