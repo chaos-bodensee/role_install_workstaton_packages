@@ -12,15 +12,13 @@ env:
     version: stretch
   - distribution: debian
     version: jessie
-  - distribution: archlinux
-    version: base
 
 
 services:
   - docker
 
 before_install:
-  - 'sudo docker pull ${distribution}$(if [ "$distribution" == "archlinux" ]; then  echo /; else echo :; fi)${version}'
+  - 'sudo docker pull ${distribution}:${version}'
   - 'sudo docker build --no-cache --rm --file=travis/Dockerfile.${distribution}-${version} --tag=${distribution}-${version}:ansible travis'
 
 script:
