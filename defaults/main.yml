@@ -21,7 +21,6 @@ shell_packages:
   - sl
   - python
   - terminator
-  - ddate
   - nmap
   - youtube-dl
   - axel
@@ -45,3 +44,7 @@ arch_packages:
   - firefox
   - openssh-askpass
   - bat
+  - xorg-xrandr
+  - curl
+  - wget
+ 
