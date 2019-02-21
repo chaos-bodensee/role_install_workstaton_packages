@@ -26,6 +26,7 @@ shell_packages:
   - youtube-dl
   - axel
   - pwgen
+  - net-tools
 
 multimedia_rhel:
   - gstreamer1-plugins-bad-free-extras
