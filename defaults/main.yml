@@ -27,6 +27,8 @@ shell_packages:
   - axel
   - pwgen
   - net-tools
+  - bind-tools
+  - mtr
 
 multimedia_rhel:
   - gstreamer1-plugins-bad-free-extras
