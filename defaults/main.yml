@@ -29,6 +29,7 @@ shell_packages:
   - net-tools
   - bind-tools
   - mtr
+  - speedtest-cli
 
 multimedia_rhel:
   - gstreamer1-plugins-bad-free-extras
