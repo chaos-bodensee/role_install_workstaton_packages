@@ -10,6 +10,7 @@ generic_office_packages:
   - system-config-printer
   - gparted
   - seahorse
+  - gpa
 
 generic_shell_packages:
   - vim
@@ -40,6 +41,7 @@ arch_packages:
   - python-pip
   - curl
   - wget
+
 
 rhel_packages:
   - gstreamer1-plugins-bad-free-extras
