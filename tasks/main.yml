@@ -1,66 +1,23 @@
 ---
+
 - name: print ansible Distribution
   debug:
-    msg: "{{ ansible_distribution }}"
+    msg: 
+      - "Distribution: {{ ansible_distribution }}"
+      - "OS Family: {{ ansible_os_family }}"
 
-- name: install the latest version of rpm packages [RHEL]
-  become: yes
-  dnf:
-    name: "{{ rpmfusion }}"
-    state: latest
-  when: ansible_os_family == 'RedHat'
-
-- name: install packages for codecs [RHEL]
-  become: yes
-  dnf:
-    name: "{{ multimedia_rhel }}"
-    state: latest
-  when: ansible_os_family == 'RedHat'
-
-- name: Install some packages for arch
-  become: yes
-  pacman:
-    name: "{{ arch_packages }}"
-    state: latest
-    update_cache: yes
-  when: ansible_distribution == 'Archlinux'
-
-- name: Update all packages to the latest version [Debian]
-  become: yes
-  apt:
-    upgrade: dist
-  when: ansible_os_family == 'Debian'
-
-- name: Update all packages to the latest version [Arch]
-  become: yes
-  pacman:
-    update_cache: yes
-    upgrade: yes
-  when: ansible_distribution == 'Archlinux'
-
-- name: upgrade all packages [RHEL]
-  become: yes
-  dnf:
-    name: "*"
-    state: latest
-  when: ansible_os_family == 'RedHat'
+- name: Include OS specific task
+  include_task: "{{ ansible_os_family }}.yml"
 
 - name: Install common base office packages
   become: yes
   package:
-    name: "{{ office_packages }}"
+    name: "{{ generic_office_packages }}"
     state: latest
 
 - name: Install some terminal needs
   become: yes
   package:
-    name: "{{ shell_packages }}"
+    name: "{{ generic_shell_packages }}"
     state: latest
-
-- name: Install packages for virtualisation [RHEL]
-  become: yes
-  dnf:
-    name: "{{ virtualisation_rhel }}"
-    state: latest
-  when: ansible_os_family == 'RedHat'
 

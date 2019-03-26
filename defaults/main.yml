@@ -1,6 +1,6 @@
 ---
 
-office_packages:
+generic_office_packages:
   - thunderbird
   - libreoffice
   - gimp
@@ -11,11 +11,7 @@ office_packages:
   - gparted
   - seahorse
 
-rpmfusion:
-  - "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
-  - "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
-
-shell_packages:
+generic_shell_packages:
   - vim
   - ranger
   - git
@@ -31,19 +27,6 @@ shell_packages:
   - mtr
   - speedtest-cli
 
-multimedia_rhel:
-  - gstreamer1-plugins-bad-free-extras
-  - gstreamer1-plugins-bad-freeworld
-  - gstreamer1-plugins-ugly
-  - gstreamer1-plugins-bad-nonfree 
-  - libselinux-python
-  - firefox
-  - openssh-askpass
-  - bat
-
-virtualisation_rhel:
-  - '@virtualization'
-
 arch_packages:
   - libvirt
   - virt-manager
@@ -54,4 +37,15 @@ arch_packages:
   - curl
   - wget
   - python-pip
- 
+
+rhel_packages:
+  - gstreamer1-plugins-bad-free-extras
+  - gstreamer1-plugins-bad-freeworld
+  - gstreamer1-plugins-ugly
+  - gstreamer1-plugins-bad-nonfree 
+  - libselinux-python
+  - firefox
+  - openssh-askpass
+  - bat
+
+

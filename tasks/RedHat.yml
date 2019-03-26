@@ -1,0 +1,32 @@
+---
+
+- name: install the latest version of rpm packages [RHEL]
+  become: yes
+  dnf:
+    name: 
+      - "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+      - "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+    state: latest
+  when: ansible_os_family == 'RedHat'
+
+- name: install packages for codecs [RHEL]
+  become: yes
+  dnf:
+    name: "{{ rhel_packages }}"
+    state: latest
+
+- name: upgrade all packages [RHEL]
+  become: yes
+  dnf:
+    name: "*"
+    state: latest
+  when: ansible_os_family == 'RedHat'
+
+- name: Install packages for virtualisation [RHEL]
+  become: yes
+  dnf:
+    name: 
+      - '@virtualization'
+    state: latest
+  when: ansible_os_family == 'RedHat'
+

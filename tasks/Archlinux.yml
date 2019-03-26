@@ -1,0 +1,17 @@
+---
+
+- name: Update all packages to the latest version [Arch]
+  become: yes
+  pacman:
+    update_cache: yes
+    upgrade: yes
+  when: ansible_distribution == 'Archlinux'
+
+- name: Install some special packages for arch
+  become: yes
+  pacman:
+    name: "{{ arch_packages }}"
+    state: latest
+    update_cache: yes
+  when: ansible_distribution == 'Archlinux'
+
