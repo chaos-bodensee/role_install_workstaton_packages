@@ -7,7 +7,7 @@
       - "OS Family: {{ ansible_os_family }}"
 
 - name: Include OS specific task
-  include_task: "{{ ansible_os_family }}.yml"
+  include_tasks: "{{ ansible_os_family }}.yml"
 
 - name: Install common base office packages
   become: yes
