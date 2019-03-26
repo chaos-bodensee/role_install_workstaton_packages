@@ -23,7 +23,7 @@ generic_shell_packages:
   - axel
   - pwgen
   - net-tools
-  - bind-tools
+  - dnsutils
   - mtr
   - speedtest-cli
 
