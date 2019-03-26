@@ -30,6 +30,7 @@ shell_packages:
   - bind-tools
   - mtr
   - speedtest-cli
+  - python-pip
 
 multimedia_rhel:
   - gstreamer1-plugins-bad-free-extras
