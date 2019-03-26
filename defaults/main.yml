@@ -26,6 +26,7 @@ generic_shell_packages:
   - dnsutils
   - mtr
   - speedtest-cli
+  - rsync
 
 arch_packages:
   - libvirt
@@ -37,6 +38,8 @@ arch_packages:
   - curl
   - wget
   - python-pip
+  - curl
+  - wget
 
 rhel_packages:
   - gstreamer1-plugins-bad-free-extras
