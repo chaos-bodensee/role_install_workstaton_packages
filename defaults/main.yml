@@ -23,10 +23,14 @@ generic_shell_packages:
   - axel
   - pwgen
   - net-tools
-  - dnsutils
   - mtr
   - speedtest-cli
   - rsync
+
+debian_packgages:
+  - dnsutils
+  - gpa
+
 
 arch_packages:
   - libvirt
@@ -41,6 +45,7 @@ arch_packages:
   - curl
   - wget
   - gpa
+  - dnsutils
 
 
 rhel_packages:
@@ -52,5 +57,6 @@ rhel_packages:
   - firefox
   - openssh-askpass
   - bat
+  - bind_utils
 
 
