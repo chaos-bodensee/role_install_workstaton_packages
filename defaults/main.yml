@@ -57,6 +57,6 @@ rhel_packages:
   - firefox
   - openssh-askpass
   - bat
-  - bind_utils
+  - bind-utils
 
 
