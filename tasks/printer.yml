@@ -16,7 +16,7 @@
 - name: Enable and start cups
   become: true
   systemd:
-    name: org.cups.cupsd.service
+    name: "{{ org_cups_cupsd_service }}"
     state: started
     enabled: yes
 
