@@ -25,5 +25,6 @@
   become: true
   include_tasks: "printer.yml"
   when: install_cups 
-
+  include_vars:
+    - "{{ ansible_os_family }}.yml"
 
