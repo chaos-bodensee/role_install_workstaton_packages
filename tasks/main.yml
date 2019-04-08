@@ -21,3 +21,9 @@
     name: "{{ generic_shell_packages }}"
     state: latest
 
+- name: Include and enable printer support
+  become: true
+  include_tasks: "printer.yml"
+  when: install_cups 
+
+

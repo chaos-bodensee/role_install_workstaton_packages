@@ -10,3 +10,9 @@ You can change the packages by defining this variables yourself.
 
 If you think here is missing something... Pleas create a pull-request or at least a issue.
 
+### config:
+If you won't have cups enabled and installed set the following variable:
+```
+install_cups: false #(default is true)
+```
+

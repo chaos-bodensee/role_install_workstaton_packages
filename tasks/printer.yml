@@ -1,0 +1,22 @@
+---
+
+- name: Install cups for printing
+  become: true
+  package:
+    name: "{{ printer_packages }}"
+    state: present
+  
+- name: Enable and start cups
+  become: true
+  systemd:
+    name: org.cups.cupsd.service
+    state: startet
+    enabled: yes
+
+- name: Enable and start avahi for printer detection in local area network
+  become: true
+  systemd:
+    name: avahi-daemon.service
+    state: startet
+    enabled: yes
+
