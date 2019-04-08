@@ -5,6 +5,13 @@
   package:
     name: "{{ printer_packages }}"
     state: present
+
+- name: Install arch packages
+  become: true
+  pacman:
+    name: "{{ arch_printer_packages }}"
+    state: present
+  when: ansible_os_family == 'Archlinux'
   
 - name: Enable and start cups
   become: true
@@ -19,4 +26,5 @@
     name: avahi-daemon.service
     state: started
     enabled: yes
+  when: ansible_os_family == 'Archlinux'
 

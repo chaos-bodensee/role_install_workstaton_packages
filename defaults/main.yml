@@ -64,7 +64,8 @@ rhel_packages:
 printer_packages:
   - cups
   - ghostscript
-  - avahi
   - cups-pdf
 
+arch_printer_packages:
+  - avahi
 
