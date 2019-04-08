@@ -10,13 +10,13 @@
   become: true
   systemd:
     name: org.cups.cupsd.service
-    state: startet
+    state: started
     enabled: yes
 
 - name: Enable and start avahi for printer detection in local area network
   become: true
   systemd:
     name: avahi-daemon.service
-    state: startet
+    state: started
     enabled: yes
 
