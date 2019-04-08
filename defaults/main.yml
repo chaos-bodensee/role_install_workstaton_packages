@@ -46,7 +46,8 @@ arch_packages:
   - wget
   - gpa
   - dnsutils
-
+  - jre-openjdk-headless 
+  - jre-openjdk
 
 rhel_packages:
   - gstreamer1-plugins-bad-free-extras
