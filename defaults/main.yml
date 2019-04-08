@@ -1,5 +1,7 @@
 ---
 
+install_cups: true
+
 generic_office_packages:
   - thunderbird
   - libreoffice
@@ -31,7 +33,6 @@ debian_packages:
   - dnsutils
   - gpa
 
-
 arch_packages:
   - libvirt
   - virt-manager
@@ -59,5 +60,11 @@ rhel_packages:
   - openssh-askpass
   - bat
   - bind-utils
+
+printer_packages:
+  - cups
+  - ghostscript
+  - avahi
+  - cups-pdf
 
 
