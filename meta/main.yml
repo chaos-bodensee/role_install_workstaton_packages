@@ -18,7 +18,7 @@ galaxy_info:
       versions:
         - bionic
   galaxy_tags: 
-    - base_packages
+    - basepackages
     - arch
     - home
     - packages
