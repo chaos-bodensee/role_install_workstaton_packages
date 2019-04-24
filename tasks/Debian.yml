@@ -9,5 +9,5 @@
   become: yes
   apt:
     name: "{{ debian_packages }}"
-    state: latest
+    state: present
   when: ansible_os_family == 'Debian'

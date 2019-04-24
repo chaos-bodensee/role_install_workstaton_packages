@@ -11,7 +11,7 @@
     name: "{{ arch_printer_packages }}"
     state: present
   when: ansible_os_family == 'Archlinux'
- 
+
 - name: Enable and start cups
   become: true
   systemd:
