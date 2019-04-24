@@ -28,4 +28,3 @@
       - '@virtualization'
     state: latest
   when: ansible_os_family == 'RedHat'
-

@@ -26,4 +26,3 @@
     state: started
     enabled: yes
   when: ansible_os_family == 'Archlinux'
-

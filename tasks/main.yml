@@ -4,7 +4,6 @@
     msg: 
       - "Distribution: {{ ansible_distribution }}"
       - "OS Family: {{ ansible_os_family }}"
-
 - name: include OS specific vars
   include_vars: "{{ ansible_os_family }}.yml"
 
@@ -27,4 +26,3 @@
   become: true
   include_tasks: "printer.yml"
   when: install_cups 
-
