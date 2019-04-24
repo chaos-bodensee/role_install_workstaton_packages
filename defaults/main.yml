@@ -1,7 +1,7 @@
 ---
-
+# should we install printer stuff like cups?
 install_cups: true
-
+# we need some generic packages...
 generic_office_packages:
   - thunderbird
   - libreoffice
@@ -12,7 +12,7 @@ generic_office_packages:
   - system-config-printer
   - gparted
   - seahorse
-
+# some packages used in our shell
 generic_shell_packages:
   - vim
   - ranger
@@ -28,11 +28,11 @@ generic_shell_packages:
   - mtr
   - speedtest-cli
   - rsync
-
+# some debian specific packages...
 debian_packages:
   - dnsutils
   - gpa
-
+# arch need some more packages
 arch_packages:
   - libvirt
   - virt-manager
@@ -49,7 +49,7 @@ arch_packages:
   - dnsutils
   - jre-openjdk-headless 
   - jre-openjdk
-
+# we try to do the best on rhel based systems
 rhel_packages:
   - gstreamer1-plugins-bad-free-extras
   - gstreamer1-plugins-bad-freeworld
@@ -60,12 +60,11 @@ rhel_packages:
   - openssh-askpass
   - bat
   - bind-utils
-
+# and what we need for cups is this
 printer_packages:
   - cups
   - ghostscript
   - cups-pdf
-
+# what we need for cups on arch is additionally avahi
 arch_printer_packages:
   - avahi
-

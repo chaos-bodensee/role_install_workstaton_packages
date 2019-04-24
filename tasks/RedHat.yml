@@ -1,5 +1,4 @@
 ---
-
 - name: install the latest version of rpm packages [RHEL]
   become: yes
   dnf:

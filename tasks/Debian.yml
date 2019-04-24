@@ -1,5 +1,4 @@
 ---
-
 - name: Update all packages to the latest version [Debian]
   become: yes
   apt:

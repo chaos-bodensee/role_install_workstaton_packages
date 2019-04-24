@@ -1,0 +1,28 @@
+galaxy_info:
+  role_name: role_install_workstaton_packages
+  author: L3D
+  description: Install some packages on your workstation/laptop you need for your daily linux life!
+  license: license (MIT) 
+  min_ansible_version: 2.2
+  platforms:
+    - name: Fedora
+      versions:
+        - 28
+        - 29
+    - name: Archlinux
+      versions: all
+    - name: Debian
+      versions: 
+        - stretch
+    - name: Ubuntu
+      versions:
+        - bionic
+  galaxy_tags: 
+    - base-packages
+    - arch
+    - home
+    - packages
+    - office
+    - desktop
+  github_branch: master
+dependencies: []

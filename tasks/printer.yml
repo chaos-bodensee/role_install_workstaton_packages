@@ -1,5 +1,4 @@
 ---
-
 - name: Install cups for printing
   become: true
   package:
