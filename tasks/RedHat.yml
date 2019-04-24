@@ -5,26 +5,52 @@
     name: 
       - "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
       - "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
-    state: latest
-  when: ansible_os_family == 'RedHat'
+    state: present
+  when: ansible_os_family == 'RedHat' and ansible_distribution == 'Fedora'
+
+- name: install the latest version of rpm packages [RHEL]
+  become: yes
+  yum:
+    name: 
+      - "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+      - "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+    state: present
+  when: ansible_os_family == 'RedHat' and ansible_distribution != 'Fedora'
+
 
 - name: install packages for codecs [RHEL]
   become: yes
-  dnf:
+  package:
     name: "{{ rhel_packages }}"
+    state: present
+
+- name: upgrade all packages [RHEL]
+  become: yes
+  yum:
+    name: "*"
     state: latest
+  when: ansible_os_family == 'RedHat' and ansible_distribution != 'Fedora'
+
+- name: Install packages for virtualisation [RHEL]
+  become: yes
+  yum:
+    name: 
+      - '@virtualization'
+    state: present
+  when: ansible_os_family == 'RedHat' and ansible_distribution != 'Fedora'
 
 - name: upgrade all packages [RHEL]
   become: yes
   dnf:
     name: "*"
     state: latest
-  when: ansible_os_family == 'RedHat'
+  when: ansible_os_family == 'RedHat' and ansible_distribution == 'Fedora'
 
 - name: Install packages for virtualisation [RHEL]
   become: yes
   dnf:
     name: 
       - '@virtualization'
-    state: latest
-  when: ansible_os_family == 'RedHat'
+    state: present
+  when: ansible_os_family == 'RedHat' and ansible_distribution == 'Fedora'
+

@@ -1,9 +1,10 @@
 ---
 - name: print ansible Distribution
   debug:
-    msg: 
+    msg:
       - "Distribution: {{ ansible_distribution }}"
       - "OS Family: {{ ansible_os_family }}"
+
 - name: include OS specific vars
   include_vars: "{{ ansible_os_family }}.yml"
 
@@ -14,15 +15,15 @@
   become: yes
   package:
     name: "{{ generic_office_packages }}"
-    state: latest
+    state: present
 
 - name: Install some terminal needs
   become: yes
   package:
     name: "{{ generic_shell_packages }}"
-    state: latest
+    state: present
 
 - name: Include and enable printer support
   become: true
   include_tasks: "printer.yml"
-  when: install_cups 
+  when: install_cups
