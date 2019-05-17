@@ -1,6 +1,6 @@
  Ansible role for basic workstation packages
 -----------------------------------------------
-[![Build Status](https://travis-ci.org/DO1JLR/role_install_workstaton_packages.svg?branch=master)](https://travis-ci.org/DO1JLR/role_install_workstaton_packages)
+[![Build Status](https://travis-ci.org/chaos-bodensee/role_install_workstaton_packages.svg?branch=master)](https://travis-ci.org/chaos-bodensee/role_install_workstaton_packages)
 
 Ansible Playbook to install basic packages *(needed for workstaion)*.
 
