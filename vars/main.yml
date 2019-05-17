@@ -54,4 +54,26 @@ arch_packages:
   - openssh
 
 playbook_version_number: 100
-playbook_version_path: '/etc/ansible-version/role-workstation-packages_chaos-bodensee_github.com.version' 
+playbook_version_path: '/etc/ansible-version/role-workstation-packages_chaos-bodensee_github.com.version'
+
+# we try to do the best on rhel based systems
+rhel_packages:
+  - gstreamer1-plugins-bad-free-extras
+  - gstreamer1-plugins-bad-freeworld
+  - gstreamer1-plugins-ugly
+  - gstreamer1-plugins-bad-nonfree 
+  - libselinux-python
+  - firefox
+  - openssh-askpass
+  - bat
+  - bind-utils
+
+# and what we need for cups is this
+printer_packages:
+  - cups
+  - ghostscript
+  - cups-pdf
+
+# what we need for cups on arch is additionally avahi
+arch_printer_packages:
+- avahi 
