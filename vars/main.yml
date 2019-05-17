@@ -1,0 +1,54 @@
+---
+# we need some generic packages...
+generic_office_packages:
+  - thunderbird
+  - libreoffice
+  - gimp
+  - inkscape
+  - mpv
+  - brasero
+  - system-config-printer
+  - gparted
+  - seahorse
+
+# some packages used in our shell
+generic_shell_packages:
+  - vim
+  - ranger
+  - git
+  - sl
+  - python
+  - terminator
+  - nmap
+  - youtube-dl
+  - axel
+  - pwgen
+  - net-tools
+  - mtr
+  - speedtest-cli
+  - rsync
+  - links
+  - tmux
+  
+# some debian specific packages...
+debian_packages:
+  - dnsutils
+  - gpa
+# arch need some more packages
+arch_packages:
+  - libvirt
+  - virt-manager
+  - firefox
+  - openssh-askpass
+  - bat
+  - xorg-xrandr
+  - curl
+  - wget
+  - python-pip
+  - curl
+  - wget
+  - gpa
+  - dnsutils
+  - jre-openjdk-headless 
+  - jre-openjdk
+  - openssh
