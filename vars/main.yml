@@ -52,3 +52,6 @@ arch_packages:
   - jre-openjdk-headless 
   - jre-openjdk
   - openssh
+
+playbook_version_number: 100
+playbook_version_path: '/etc/ansible-version/role-workstation-packages_chaos-bodensee_github.com.version' 

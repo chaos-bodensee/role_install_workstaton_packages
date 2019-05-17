@@ -5,6 +5,9 @@
       - "Distribution: {{ ansible_distribution }}"
       - "OS Family: {{ ansible_os_family }}"
 
+- include_tasks: versioncheck.yml
+  when: submodules_versioncheck
+
 - name: include OS specific vars
   include_vars: "{{ ansible_os_family }}.yml"
 

@@ -2,3 +2,5 @@
 # should we install printer stuff like cups?
 install_cups: true
 
+# version check for this playbook
+submodules_versioncheck: true
