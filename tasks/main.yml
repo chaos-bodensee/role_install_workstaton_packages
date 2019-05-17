@@ -7,7 +7,7 @@
 
 - name: make versionscheck
   include_tasks: versioncheck.yml
-  when: submodules_versioncheck
+  when: submodules_versioncheck|bool
 
 - name: include OS specific vars
   include_vars: "{{ ansible_os_family }}.yml"
@@ -29,4 +29,4 @@
 
 - name: Include and enable printer support
   include_tasks: "printer.yml"
-  when: install_cups
+  when: install_cups|bool
