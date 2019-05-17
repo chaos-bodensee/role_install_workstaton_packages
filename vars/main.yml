@@ -53,7 +53,7 @@ arch_packages:
   - jre-openjdk
   - openssh
 
-playbook_version_number: 100
+playbook_version_number: 101
 playbook_version_path: '/etc/ansible-version/role-workstation-packages_chaos-bodensee_github.com.version'
 
 # we try to do the best on rhel based systems
