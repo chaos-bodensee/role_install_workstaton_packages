@@ -12,6 +12,7 @@ generic_office_packages:
   - system-config-printer
   - gparted
   - seahorse
+  - okular
 
 # some packages used in our shell
 generic_shell_packages:
@@ -55,6 +56,8 @@ arch_packages:
   - jre-openjdk-headless 
   - jre-openjdk
   - openssh
+  - lcms2 
+  - lib32-lcms2
 
 playbook_version_path: '/etc/ansible-version/role-workstation-packages_chaos-bodensee_github.com.version'
 
