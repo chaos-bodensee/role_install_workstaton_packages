@@ -30,3 +30,10 @@
 - name: Include and enable printer support
   include_tasks: "printer.yml"
   when: install_cups|bool
+
+- name: Install some additional extra packages
+  become: true
+  package:
+    name: "{{ install_extra_workstation_packages }}"
+    state: present
+  when: install_extra_workstation_packages is defined

@@ -1,4 +1,6 @@
 ---
+playbook_version_number: 103
+
 # we need some generic packages...
 generic_office_packages:
   - thunderbird
@@ -34,6 +36,7 @@ generic_shell_packages:
 debian_packages:
   - dnsutils
   - gpa
+
 # arch need some more packages
 arch_packages:
   - libvirt
@@ -53,7 +56,6 @@ arch_packages:
   - jre-openjdk
   - openssh
 
-playbook_version_number: 101
 playbook_version_path: '/etc/ansible-version/role-workstation-packages_chaos-bodensee_github.com.version'
 
 # we try to do the best on rhel based systems
@@ -65,7 +67,6 @@ rhel_packages:
   - libselinux-python
   - firefox
   - openssh-askpass
-  - bat
   - bind-utils
 
 # and what we need for cups is this
