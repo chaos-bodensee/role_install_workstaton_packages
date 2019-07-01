@@ -1,5 +1,5 @@
 ---
-playbook_version_number: 105
+playbook_version_number: 106 # should be over ninethousand
 
 # we need some generic packages...
 generic_office_packages:
@@ -14,6 +14,7 @@ generic_office_packages:
   - seahorse
   - okular
   - audacity
+  - mumble
 
 # some packages used in our shell
 generic_shell_packages:
