@@ -1,9 +1,6 @@
 ---
-- name: print ansible Distribution
-  debug:
-    msg:
-      - "Distribution: {{ ansible_distribution }}"
-      - "OS Family: {{ ansible_os_family }}"
+- include_tasks: os_info.yml
+  when: print_os_vars | bool
 
 - name: make versionscheck
   include_tasks: versioncheck.yml
@@ -14,6 +11,9 @@
 
 - name: Include OS specific task
   include_tasks: "{{ ansible_os_family }}.yml"
+
+- include_tasks: sources.yml
+  when: ansible_distribution == 'Debian'
 
 - name: Install common base office packages
   become: yes
@@ -37,3 +37,6 @@
     name: "{{ install_extra_workstation_packages }}"
     state: present
   when: install_extra_workstation_packages is defined
+
+- include_tasks: editor.yml
+  when: editor_is_vim | bool

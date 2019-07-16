@@ -1,5 +1,5 @@
 ---
-playbook_version_number: 106 # should be over ninethousand
+playbook_version_number: 3000 # should be over ninethousand
 
 # we need some generic packages...
 generic_office_packages:
@@ -34,11 +34,14 @@ generic_shell_packages:
   - rsync
   - links
   - tmux
-  
+  - htop 
+ 
 # some debian specific packages...
 debian_packages:
   - dnsutils
   - gpa
+  - asciinema
+  - nethogs
 
 # arch need some more packages
 arch_packages:
@@ -60,6 +63,14 @@ arch_packages:
   - openssh
   - lcms2 
   - lib32-lcms2
+  - nethogs
+  - asciinema
+  - ncdu
+  - atop
+  - nload
+  - iotop
+  - iftop
+  - ethstatus
 
 playbook_version_path: '/etc/ansible-version/role-workstation-packages_chaos-bodensee_github.com.version'
 
