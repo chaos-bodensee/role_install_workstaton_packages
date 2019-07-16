@@ -1,5 +1,5 @@
 ---
-playbook_version_number: 3000 # should be over ninethousand
+playbook_version_number: 3001 # should be over ninethousand
 
 # we need some generic packages...
 generic_office_packages:
@@ -70,7 +70,6 @@ arch_packages:
   - nload
   - iotop
   - iftop
-  - ethstatus
 
 playbook_version_path: '/etc/ansible-version/role-workstation-packages_chaos-bodensee_github.com.version'
 
