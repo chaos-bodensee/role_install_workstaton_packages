@@ -1,5 +1,5 @@
 ---
-playbook_version_number: 3002 # should be over ninethousand
+playbook_version_number: 3003 # should be over ninethousand
 
 # we need some generic packages...
 generic_office_packages:
@@ -15,6 +15,7 @@ generic_office_packages:
   - okular
   - audacity
   - mumble
+  - gedit 
 
 # some packages used in our shell
 generic_shell_packages:
@@ -34,7 +35,7 @@ generic_shell_packages:
   - rsync
   - links
   - tmux
-  - htop 
+  - htop
  
 # some debian specific packages...
 debian_packages:
@@ -70,6 +71,7 @@ arch_packages:
   - nload
   - iotop
   - iftop
+  - xed
 
 playbook_version_path: '/etc/ansible-version/role-workstation-packages_chaos-bodensee_github.com.version'
 
