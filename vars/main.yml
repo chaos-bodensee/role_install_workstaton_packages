@@ -1,5 +1,5 @@
 ---
-playbook_version_number: 3003 # should be over ninethousand
+playbook_version_number: 3004 # should be over ninethousand
 
 # we need some generic packages...
 generic_office_packages:
@@ -72,6 +72,7 @@ arch_packages:
   - iotop
   - iftop
   - xed
+  - cmatrix
 
 playbook_version_path: '/etc/ansible-version/role-workstation-packages_chaos-bodensee_github.com.version'
 
