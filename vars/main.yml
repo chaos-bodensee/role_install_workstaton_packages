@@ -1,5 +1,5 @@
 ---
-playbook_version_number: 4096 # should be over ninethousand
+playbook_version_number: 5090 # should be over ninethousand
 
 # we need some generic packages...
 generic_office_packages:
@@ -89,6 +89,7 @@ rhel_packages:
   - firefox
   - openssh-askpass
   - bind-utils
+  - mlt
 
 # and what we need for cups is this
 printer_packages:
