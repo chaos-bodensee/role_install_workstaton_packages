@@ -18,7 +18,6 @@ generic_office_packages:
   - gedit 
   - transmission-cli
   - transmission-gtk
-  - mlt
 
 # some packages used in our shell
 generic_shell_packages:
@@ -76,6 +75,7 @@ arch_packages:
   - iftop
   - xed
   - cmatrix
+  - mlt
 
 playbook_version_path: '/etc/ansible-version/role-workstation-packages_chaos-bodensee_github.com.version'
 
