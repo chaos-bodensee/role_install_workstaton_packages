@@ -1,5 +1,5 @@
 ---
-playbook_version_number: 5090 # should be over ninethousand
+playbook_version_number: 5092 # should be over ninethousand
 
 # we need some generic packages...
 generic_office_packages:
@@ -77,7 +77,7 @@ arch_packages:
   - cmatrix
   - mlt
 
-playbook_version_path: '/etc/ansible-version/role-workstation-packages_chaos-bodensee_github.com.version'
+playbook_version_path: 'role-workstation-packages_chaos-bodensee_github.com.version'
 
 # we try to do the best on rhel based systems
 rhel_packages:
