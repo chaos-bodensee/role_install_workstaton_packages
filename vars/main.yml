@@ -1,5 +1,5 @@
 ---
-playbook_version_number: 5092 # should be over ninethousand
+playbook_version_number: 5099 # should be over ninethousand
 
 # we need some generic packages...
 generic_office_packages:
@@ -45,6 +45,7 @@ debian_packages:
   - gpa
   - asciinema
   - nethogs
+  - sshfs
 
 # arch need some more packages
 arch_packages:
@@ -76,6 +77,7 @@ arch_packages:
   - xed
   - cmatrix
   - mlt
+  - sshfs
 
 playbook_version_path: 'role-workstation-packages_chaos-bodensee_github.com.version'
 
