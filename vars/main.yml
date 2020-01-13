@@ -1,5 +1,5 @@
 ---
-playbook_version_number: 5101 # should be over ninethousand
+playbook_version_number: 5102 # should be over ninethousand
 
 # we need some generic packages...
 generic_office_packages:
@@ -39,6 +39,7 @@ generic_shell_packages:
   - links
   - tmux
   - htop
+  - whois
  
 # some debian specific packages...
 debian_packages:
