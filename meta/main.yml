@@ -1,22 +1,44 @@
 galaxy_info:
   role_name: role_install_workstaton_packages
   author: L3D
-  description: Install some packages on your workstation/laptop you need for your daily linux life!
+  description: Install some base-packages anddesktop-packages for your Workstation, Laptop or Desktop Linux Computer you could need for your daily linux life! [Feel free to sugest changes]
   license: license (MIT)
-  min_ansible_version: 2.2
+  min_ansible_version: 2.3
   platforms:
-    - name: Fedora
-      versions:
-        - 28
-        - 29
     - name: Archlinux
       versions: all
+    - name: Alpine
+      version:
+        - latest
+        - 3.10
+        - 3.9
+        - 3.8
+    - name: Clearlinux
+      version:
+        - latest
     - name: Debian
       versions:
-        - stretch
-    - name: Ubuntu
+        - latest
+        - stable
+        - 10
+        - 9
+        - 8
+    - name: EL
       versions:
-        - bionic
+        - latest
+        - 8
+        - 7
+    - name: Fedora
+      versions:
+        - latest
+        - 31
+        - 30
+        - 29
+        - 28
+    - name: Suse
+      versions:
+        - latest
+        - 15
   galaxy_tags:
     - basepackages
     - arch

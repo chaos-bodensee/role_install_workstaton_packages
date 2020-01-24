@@ -1,12 +1,18 @@
  Ansible role for basic workstation packages
------------------------------------------------
+=========================================
+
 [![Build Status](https://travis-ci.org/chaos-bodensee/role_install_workstaton_packages.svg?branch=master)](https://travis-ci.org/chaos-bodensee/role_install_workstaton_packages)
 
-Ansible Playbook to install some packages, you usually need on workstations and laptops for your basic use.
+Ansible Playbook to install some basic packages and desctop packages, you could need to enjoy your linux desktop.
 
-Have a look into the ``vars/main.yml`` File to find out which packages will be installed.
+ Which packages
+--------------
+Have a look into the ``vars/main.yml`` File *[github](https://github.com/chaos-bodensee/role_install_workstaton_packages/blob/master/vars/main.yml))* to find out which packages will be installed.
+Please be aware that not all packages are available at every linux distribution!
 
-Have a look into ``defaults/main.yml`` if you want to change some default parameters. A few of them a described below:
+ default settings
+----------
+Have a look into ``defaults/main.yml`` *([github](https://github.com/chaos-bodensee/role_install_workstaton_packages/blob/master/defaults/main.yml))* you want to change some default parameters. A few of them a described below:
 
 
 ### config:
@@ -27,3 +33,41 @@ install_extra_workstation_packages:
   - bar
 ```
 
+ Installation:
+----------------
+
+### Using ansible galaxy
+```bash
+# installation
+ansible-galaxy install do1jlr.role_install_workstaton_packages
+```
+
+```yaml
+---
+# example playbook
+- name: install some base and desktop packages
+  roles:
+  - do1jlr.role_install_workstaton_packages
+```
+
+# without ansible galaxy
+```bash
+# installation
+git clone https://github.com/chaos-bodensee/role_install_workstaton_packages.git roles/workstation_packages
+```
+
+```yaml
+---
+# example playbook
+- name: install some base and desktop packages
+  tags:
+   - packages
+   - default
+  roles:
+    - workstation_packages
+```
+
+ Contribute
+-----------
+If something is not working properly, please feel free to open an issue! *(Or even better: Create a pull-request)* <br />
+If you are missing something, please leave a issue *(or a pull-request)*!
