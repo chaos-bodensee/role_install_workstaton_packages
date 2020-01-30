@@ -18,33 +18,23 @@ galaxy_info:
         - latest
     - name: Ubuntu
       versions:
-        - latest
-        - stable
         - bionic
         - cosmic
     - name: Debian
       versions:
-        - latest
-        - stable
-        - 10
-        - 9
-        - 8
+        - sid
+        - buster
+        - stretch
     - name: EL
       versions:
-        - latest
         - 8
         - 7
     - name: Fedora
       versions:
-        - latest
         - 31
         - 30
         - 29
         - 28
-    - name: Suse
-      versions:
-        - latest
-        - 15
   galaxy_tags:
     - basepackages
     - arch
