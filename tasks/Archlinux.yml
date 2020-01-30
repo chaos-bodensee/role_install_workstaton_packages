@@ -1,12 +1,12 @@
 ---
-- name: Update all packages to the latest version [Arch]
+- name: Update all packages to the latest version [Archlinux]
   become: yes
   pacman:
     update_cache: yes
     upgrade: yes
   when: ansible_distribution == 'Archlinux'
 
-- name: Install some special packages for arch
+- name: Install some special packages - only for Archlinux
   become: yes
   pacman:
     name: "{{ arch_packages }}"

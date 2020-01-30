@@ -1,11 +1,11 @@
 ---
-- name: Update all packages to the latest version [Debian]
+- name: Update all packages to the latest version [Debian/Ubuntu]
   become: yes
   apt:
     upgrade: dist
   when: ansible_os_family == 'Debian'
 
-- name: Update all packages to the latest version [Debian]
+- name: Install packages - only for Debian/Ubuntu
   become: yes
   apt:
     name: "{{ debian_packages }}"
