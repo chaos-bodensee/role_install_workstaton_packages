@@ -27,12 +27,6 @@
     name: "{{ base_office_packages }}"
     state: present
 
-- name: Install some terminal needs
-  become: yes
-  package:
-    name: "{{ generic_shell_packages }}"
-    state: present
-
 - name: Include and enable printer support
   include_tasks: "printer.yml"
   when: install_cups|bool

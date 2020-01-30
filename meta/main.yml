@@ -16,6 +16,12 @@ galaxy_info:
     - name: Clearlinux
       version:
         - latest
+    - name: Ubuntu
+      versions:
+        - latest
+        - stable
+        - bionic
+        - cosmic
     - name: Debian
       versions:
         - latest
