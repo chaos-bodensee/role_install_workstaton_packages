@@ -67,6 +67,15 @@ git clone https://github.com/chaos-bodensee/role_install_workstaton_packages.git
     - workstation_packages
 ```
 
+ Recomended additional ansible repos to install useful packages:
+----------
+
+| package name | github url | ansible galaxy |
+| ------------ | ---------- | -------------- |
+| ``ranger`` *(file manager)* | [github.com/chaos-bodensee/role-ranger](https://github.com/chaos-bodensee/role-ranger.git) | *(comming soon)* |
+| ``bat`` | [https://github.com/gantsign/ansible_role_bat](https://github.com/gantsign/ansible_role_bat) | *(soon)* |
+
+
  Contribute
 -----------
 If something is not working properly, please feel free to open an issue! *(Or even better: Create a pull-request)* <br />
