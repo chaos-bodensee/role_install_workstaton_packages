@@ -1,4 +1,9 @@
 ---
 - hosts: all
+  vars:
+    install_cups: false
+    add_ethz: false
+    submodules_versioncheck: false
+    print_os_vars: true
   roles:
     - travis_test
