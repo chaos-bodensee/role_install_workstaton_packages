@@ -1,4 +1,5 @@
 ---
+# If you are working full-time in the RedHead universe  - you may want to check if this is still a good package choise!
 - name: install the latest version of rpm packages [RHEL]
   become: yes
   dnf:
@@ -16,7 +17,6 @@
       - "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
     state: present
   when: ansible_os_family == 'RedHat' and ansible_distribution != 'Fedora'
-
 
 - name: install packages for codecs [RHEL]
   become: yes

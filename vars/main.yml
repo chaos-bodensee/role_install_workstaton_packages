@@ -1,29 +1,9 @@
 ---
-playbook_version_number: 5103 # should be over ninethousand
+playbook_version_number: 5105 # should be over ninethousand
 
-# we need some generic packages...
-generic_office_packages:
-  - thunderbird
-  - libreoffice
-  - gimp
-  - inkscape
-  - mpv
-  - brasero
-  - system-config-printer
-  - gparted
-  - seahorse
-  - okular
-  - audacity
-  - mumble
-  - gedit 
-  - transmission-cli
-  - transmission-gtk
-  - meld
-
-# some packages used in our shell
-generic_shell_packages:
+# base shell packages that are probably useful
+base_shell_packages:
   - vim
-  - ranger
   - git
   - sl
   - python
@@ -40,8 +20,29 @@ generic_shell_packages:
   - tmux
   - htop
   - whois
+  - ranger
  
-# some debian specific packages...
+# base gui packages that are probably useful
+base_office_packages:
+  - thunderbird
+  - libreoffice
+  - gimp
+  - inkscape
+  - mpv
+  - brasero
+  - system-config-printer
+  - gparted
+  - seahorse
+  - okular
+  - audacity
+  - mumble
+  - gedit 
+  - transmission-cli
+  - transmission-gtk
+  - meld
+  - nautilus
+
+# os specific packages - not available on all platforms
 debian_packages:
   - dnsutils
   - gpa
@@ -49,7 +50,6 @@ debian_packages:
   - nethogs
   - sshfs
 
-# arch need some more packages
 arch_packages:
   - libvirt
   - virt-manager
@@ -64,8 +64,6 @@ arch_packages:
   - wget
   - gpa
   - dnsutils
-  - jre-openjdk-headless 
-  - jre-openjdk
   - openssh
   - lcms2 
   - lib32-lcms2
@@ -81,20 +79,21 @@ arch_packages:
   - mlt
   - sshfs
 
-
-playbook_version_path: 'role-workstation-packages_chaos-bodensee_github.com.version'
-
 # we try to do the best on rhel based systems
+# please leave a comment if you are at home in this universe
+# and are missing some features!
 rhel_packages:
-  - gstreamer1-plugins-bad-free-extras
-  - gstreamer1-plugins-bad-freeworld
-  - gstreamer1-plugins-ugly
-  - gstreamer1-plugins-bad-nonfree 
   - libselinux-python
   - firefox
   - openssh-askpass
   - bind-utils
   - mlt
+  - gstreamer1-plugins-bad-free-extras
+  - gstreamer1-plugins-bad-freeworld
+  - gstreamer1-plugins-ugly
+  - gstreamer1-plugins-bad-nonfree 
+
+playbook_version_path: 'role-workstation-packages_chaos-bodensee_github.com.version'
 
 # and what we need for cups is this
 printer_packages:
@@ -102,6 +101,6 @@ printer_packages:
   - ghostscript
   - cups-pdf
 
-# what we need for cups on arch is additionally avahi
+# what we need for cups on arch is additionally...
 arch_printer_packages:
 - avahi 

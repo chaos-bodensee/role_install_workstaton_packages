@@ -6,7 +6,7 @@
   include_tasks: versioncheck.yml
   when: submodules_versioncheck|bool
 
-- name: include OS specific vars
+- name: include OS specific variables
   include_vars: "{{ ansible_os_family }}.yml"
 
 - name: Include OS specific task
@@ -15,16 +15,16 @@
 - include_tasks: sources.yml
   when: ansible_distribution == 'Debian'
 
-- name: Install common base office packages
+- name: install base shell packages
   become: yes
   package:
-    name: "{{ generic_office_packages }}"
+    name: "{{ base_shell_packages }}"
     state: present
 
-- name: Install some terminal needs
+- name: Install base office packages
   become: yes
   package:
-    name: "{{ generic_shell_packages }}"
+    name: "{{ base_office_packages }}"
     state: present
 
 - name: Include and enable printer support
