@@ -1,27 +1,8 @@
 ---
-playbook_version_number: 5103 # should be over ninethousand
+playbook_version_number: 5104 # should be over ninethousand
 
-# we need some generic packages...
-generic_office_packages:
-  - thunderbird
-  - libreoffice
-  - gimp
-  - inkscape
-  - mpv
-  - brasero
-  - system-config-printer
-  - gparted
-  - seahorse
-  - okular
-  - audacity
-  - mumble
-  - gedit 
-  - transmission-cli
-  - transmission-gtk
-  - meld
-
-# some packages used in our shell
-generic_shell_packages:
+# base shell packages that are probably useful
+base_shell_packages:
   - vim
   - ranger
   - git
@@ -41,6 +22,25 @@ generic_shell_packages:
   - htop
   - whois
  
+# base gui packages that are probably useful
+base_office_packages:
+  - thunderbird
+  - libreoffice
+  - gimp
+  - inkscape
+  - mpv
+  - brasero
+  - system-config-printer
+  - gparted
+  - seahorse
+  - okular
+  - audacity
+  - mumble
+  - gedit 
+  - transmission-cli
+  - transmission-gtk
+  - meld
+
 # some debian specific packages...
 debian_packages:
   - dnsutils
