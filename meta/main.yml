@@ -1,7 +1,7 @@
 galaxy_info:
   role_name: role_install_workstaton_packages
   author: L3D
-  description: Install some base-packages anddesktop-packages for your Workstation, Laptop or Desktop Linux Computer you could need for your daily linux life! [Feel free to sugest changes]
+  description: Install some base and desktop Packages for your Linux Desktop Computer you could need for your daily linux life! [Feel free to sugest changes]
   license: license (MIT)
   min_ansible_version: 2.3
   platforms:
