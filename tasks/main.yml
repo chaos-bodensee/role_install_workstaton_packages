@@ -28,7 +28,7 @@
     state: present
 
 - name: Include and enable printer support
-  include_tasks: "printer.yml"
+  include_tasks: printer.yml
   when: install_cups|bool
 
 - name: Install some additional extra packages
