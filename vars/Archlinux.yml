@@ -1,2 +1,2 @@
 ---
-org_cups_cupsd_service: 'org.cups.cupsd.service'
+org_cups_cupsd_service: 'cups.service'

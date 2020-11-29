@@ -1,5 +1,5 @@
 ---
-playbook_version_number: 5105 # should be over ninethousand
+playbook_version_number: 5106 # should be over ninethousand
 
 # base shell packages that are probably useful
 base_shell_packages:
@@ -21,7 +21,7 @@ base_shell_packages:
   - htop
   - whois
   - ranger
- 
+
 # base gui packages that are probably useful
 base_office_packages:
   - thunderbird
@@ -36,7 +36,7 @@ base_office_packages:
   - okular
   - audacity
   - mumble
-  - gedit 
+  - gedit
   - transmission-cli
   - transmission-gtk
   - meld
@@ -65,7 +65,7 @@ arch_packages:
   - gpa
   - dnsutils
   - openssh
-  - lcms2 
+  - lcms2
   - lib32-lcms2
   - nethogs
   - asciinema
@@ -91,7 +91,7 @@ rhel_packages:
   - gstreamer1-plugins-bad-free-extras
   - gstreamer1-plugins-bad-freeworld
   - gstreamer1-plugins-ugly
-  - gstreamer1-plugins-bad-nonfree 
+  - gstreamer1-plugins-bad-nonfree
 
 playbook_version_path: 'role-workstation-packages_chaos-bodensee_github.com.version'
 
@@ -103,4 +103,4 @@ printer_packages:
 
 # what we need for cups on arch is additionally...
 arch_printer_packages:
-- avahi 
+- avahi
