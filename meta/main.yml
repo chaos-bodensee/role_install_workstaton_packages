@@ -3,38 +3,22 @@ galaxy_info:
   author: L3D
   description: Install some base and desktop Packages for your Linux Desktop Computer you could need for your daily linux life! [Feel free to sugest changes]
   license: license (MIT)
-  min_ansible_version: 2.3
+  min_ansible_version: 2.8
   platforms:
     - name: Archlinux
       versions: all
     - name: Alpine
-      version:
-        - latest
-        - 3.10
-        - 3.9
-        - 3.8
+      version: all
     - name: Clearlinux
-      version:
-        - latest
+      version: all
     - name: Ubuntu
-      versions:
-        - bionic
-        - cosmic
+      versions: all
     - name: Debian
-      versions:
-        - sid
-        - buster
-        - stretch
+      versions: all
     - name: EL
-      versions:
-        - 8
-        - 7
+      versions: all
     - name: Fedora
-      versions:
-        - 31
-        - 30
-        - 29
-        - 28
+      versions: all
   galaxy_tags:
     - basepackages
     - arch
@@ -43,4 +27,5 @@ galaxy_info:
     - office
     - desktop
   github_branch: master
-dependencies: []
+dependencies:
+  - do1jlr.base

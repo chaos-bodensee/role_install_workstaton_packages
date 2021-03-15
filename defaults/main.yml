@@ -5,7 +5,7 @@ install_cups: true
 # version check for this playbook
 submodules_versioncheck: true
 
-# If you wan't some more packages installed... 
+# If you wan't some more packages installed...
 install_extra_workstation_packages: []
 #  - foo
 #  - bar
