@@ -1,7 +1,9 @@
  Ansible role for basic workstation packages
 =========================================
 
-[![Build Status](https://travis-ci.org/chaos-bodensee/role_install_workstaton_packages.svg?branch=master)](https://travis-ci.org/chaos-bodensee/role_install_workstaton_packages)
+```
+This ansible role is no longer maintained
+```
 
 Ansible Playbook to install some basic packages and desctop packages, you could need to enjoy your linux desktop.
 
