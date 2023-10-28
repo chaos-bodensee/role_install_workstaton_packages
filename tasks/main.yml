@@ -2,6 +2,11 @@
 - include_tasks: os_info.yml
   when: print_os_vars | bool
 
+- name: No longer maintained
+  ansible.builtin.fail:
+    msg: This role is no longer maintained!
+  when: skip_base_office_role_deprecation_warning | default(true)
+
 - name: make versionscheck
   include_tasks: versioncheck.yml
   when: submodules_versioncheck|bool
